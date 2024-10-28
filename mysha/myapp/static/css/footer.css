@@ -1,0 +1,48 @@
+.footer {
+    background-color: #CFCFCF; /* Колір фону футера */
+    color: #333; /* Колір тексту */
+    padding: 15px 30px; /* Внутрішні відступи */
+    width: 100%; /* Ширина футера на 100% */
+    position: relative; /* Відносне позиціонування */
+    bottom: 0; /* Вирівнювання по нижньому краю */
+}
+
+.footer .container {
+    display: flex; /* Використання flexbox для вирівнювання елементів */
+    justify-content: space-between; /* Розподіл елементів по всій ширині */
+    flex-wrap: wrap; /* Дозволяє елементам переходити на новий ряд, якщо не вистачає місця */
+}
+
+.footer h5 {
+    font-size: 1.1em; /* Розмір заголовка */
+    font-weight: bold; /* Жирний шрифт */
+    color: #333; /* Колір заголовка */
+}
+
+.footer p, .footer .footer-link {
+    color: #333; /* Колір тексту для параграфів і посилань */
+    margin: 5px 0; /* Відступи між параграфами */
+}
+
+.footer .footer-link {
+    text-decoration: none; /* Без підкреслення для посилань */
+    color: #333; /* Колір посилань */
+    font-weight: bold; /* Жирний шрифт для посилань */
+    transition: color 0.3s; /* Плавний перехід кольору */
+}
+
+.footer .footer-link:hover {
+    color: #8ba2f0; /* Колір при наведенні на посилання */
+}
+
+.footer .footer-icon {
+    color: #333; /* Колір іконок */
+    font-size: 1.2em; /* Розмір іконок */
+    margin-right: 15px; /* Відступи справа */
+    transition: color 0.3s; /* Плавний перехід кольору */
+    text-decoration: none; /* Без підкреслення для іконок */
+}
+
+.footer .footer-icon:hover {
+    color: #8ba2f0; /* Колір при наведенні на іконки */
+}

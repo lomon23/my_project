@@ -1,0 +1,38 @@
+/* about.css */
+.about-container {
+    max-width: 800px; /* Максимальна ширина контейнера */
+    margin: 50px auto; /* Вирівнювання по центру */
+    padding: 20px; /* Внутрішні відступи */
+    background-color: #ffffff; /* Колір фону */
+    border-radius: 8px; /* Закруглені краї */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+.about-title {
+    text-align: center; /* Вирівнювання заголовка по центру */
+    color: #333; /* Колір заголовка */
+    margin-bottom: 30px; /* Відступ між заголовком і описом */
+    font-size: 2.5em; /* Розмір заголовка */
+}
+
+.about-description, .about-mission, .about-team, .about-contact {
+    margin-bottom: 20px; /* Відступ між параграфами */
+    line-height: 1.6; /* Висота рядка */
+    color: #555; /* Колір тексту */
+    font-size: 1.2em; /* Розмір тексту */
+}
+
+h2 {
+    color: #8ba2f0; /* Колір підзаголовків */
+    margin-top: 20px; /* Відступ зверху для підзаголовків */
+    font-size: 1.8em; /* Розмір підзаголовків */
+}
+
+a {
+    color: #8ba2f0; /* Колір посилання */
+    text-decoration: none; /* Без підкреслення */
+}
+
+a:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}

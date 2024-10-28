@@ -1,0 +1,52 @@
+.product-card {
+    display: flex;
+    flex-wrap: wrap; /* Дозволяє карткам переходити на новий рядок */
+    gap: 20px; /* Відстань між картками */
+    justify-content: center; /* Вирівнювання карток по центру */
+}
+
+.card {
+    background-color: #ffffff; /* Колір фону картки */
+    border-radius: 8px; /* Закруглені краї */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тінь картки */
+    width: 200px; /* Фіксована ширина картки */
+    display: flex;
+    flex-direction: column; /* Вирівнювання елементів у стовпчик */
+    overflow: hidden; /* Сховати переповнені елементи */
+}
+
+.card img {
+    width: 100%; /* Ширина зображення на всю ширину картки */
+    height: 150px; /* Висота зображення */
+    object-fit: cover; /* Вирівнювання зображення, щоб заповнити область */
+}
+
+.card h2 {
+    font-size: 18px; /* Розмір заголовка товару */
+    margin: 10px; /* Відступи навколо заголовка */
+}
+
+.card p {
+    margin: 5px 10px; /* Відступи для тексту */
+}
+
+.card a {
+    margin: 10px; /* Відступ для кнопки */
+    padding: 10px; /* Внутрішні відступи */
+    text-align: center; /* Вирівнювання тексту по центру */
+    display: block; /* Відображення кнопки як блочний елемент */
+    background-color: #8ba2f0; /* Колір фону кнопки */
+    color: white; /* Колір тексту кнопки */
+    text-decoration: none; /* Без підкреслення */
+    border-radius: 5px; /* Закруглені краї кнопки */
+    transition: background-color 0.3s; /* Анімація при зміні кольору */
+}
+
+.card a:hover {
+    background-color: #687bb7; /* Темніший колір кнопки при наведенні */
+}
+
+.card .price {
+    margin: 5px 10px; /* Відступ для ціни */
+    font-weight: bold; /* Жирний текст для ціни */
+}

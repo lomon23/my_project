@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="{% static 'css/product_list.css' %}">
+</head>
+<body>
+{% block content %}
+    <h1>Product List</h1>
+        <div class="product-card">
+            {% for product in products %}
+                <div class="card">
+                    <img src="{{ product.image_url|default:'https://via.placeholder.com/200' }}" alt="{{ product.name }}">
+                    <h2>{{ product.name }}</h2>
+                    <p class="price">Price: ${{ product.price }}</p>
+                    <p>In stock: {{ product.stock }}</p>
+                    <a href="{% url 'product_detail' product.id %}">View Product</a>
+                </div>
+            {% endfor %}
+        </div>
+{% endblock %}
+</body>
+</html>

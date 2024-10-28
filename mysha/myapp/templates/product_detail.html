@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ product.name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #faf4ef;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #8ba2f0;
+            font-size: 28px;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .details {
+            margin: 20px 0;
+        }
+        p {
+            color: #555;
+            font-size: 18px;
+        }
+        .buy-button {
+            background-color: #8ba2f0;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .buy-button:hover {
+            background-color: #687bb7;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: #8ba2f0;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>{{ product.name }}</h1>
+        <img src="https://via.placeholder.com/400" alt="{{ product.name }}">
+        <div class="details">
+            <p>{{ product.description }}</p>
+            <p>Price: ${{ product.price }}</p>
+            <p>In stock: {{ product.stock }}</p>
+            <p>Purchases: {{ product.order_set.count }}</p>
+        </div>
+        <a class="buy-button" href="{% url 'order_product' product.id %}">Buy</a>
+        <a href="{% url 'product_list' %}">Back to Shop</a>
+    </div>
+</body>
+</html>

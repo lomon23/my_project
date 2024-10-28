@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+</head>
+<body>
+{% block content %}
+    <div class="contact-container">
+        <h1 class="contact-title">Зв'яжіться з нами</h1>
+        
+        <div class="contact-info">
+            <p><strong>Адреса:</strong> вулиця Прикладна, 123, Київ, Україна</p>
+            <p><strong>Телефон:</strong> +380 123 456 789</p>
+            <p><strong>Email:</strong> info@example.com</p>
+        </div>
+
+        <form method="POST" class="contact-form">
+            {% csrf_token %}
+            <label for="name" class="form-label">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" class="form-input" required>
+
+            <label for="email" class="form-label">Ваш email:</label>
+            <input type="email" id="email" name="email" class="form-input" required>
+
+            <label for="message" class="form-label">Повідомлення:</label>
+            <textarea id="message" name="message" class="form-input" required></textarea>
+
+            <button type="submit" class="contact-button">Відправити</button>
+        </form>
+
+        <a href="{% url 'product_list' %}" class="back-link">Назад до списку товарів</a>
+    </div>
+{% endblock %}
+</body>
+</html>

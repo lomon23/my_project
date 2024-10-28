@@ -1,0 +1,66 @@
+.contact-container {
+    max-width: 600px; /* Максимальна ширина контейнера */
+    margin: 50px auto; /* Вирівнювання по центру */
+    padding: 20px; /* Внутрішні відступи */
+    background-color: #ffffff; /* Колір фону */
+    border-radius: 8px; /* Закруглені краї */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Тінь */
+}
+
+.contact-title {
+    text-align: center; /* Вирівнювання заголовка по центру */
+    color: #333; /* Колір заголовка */
+    margin-bottom: 30px; /* Відступ між заголовком і формою */
+}
+
+.contact-info {
+    margin-bottom: 30px; /* Відступ між інформацією та формою */
+}
+
+.form-label {
+    display: block; /* Відображення етикетки як блочного елемента */
+    font-size: 16px; /* Розмір тексту етикетки */
+    color: #333; /* Колір тексту */
+    margin-bottom: 5px; /* Відступ між етикеткою та полем вводу */
+}
+
+.form-input {
+    width: 100%; /* Ширина поля вводу */
+    padding: 10px; /* Внутрішні відступи */
+    border: 1px solid #ccc; /* Обводка */
+    border-radius: 5px; /* Закруглені краї */
+    transition: border-color 0.3s; /* Анімація при зміні кольору обводки */
+    margin-bottom: 20px; /* Відступ між полями вводу */
+}
+
+.form-input:focus {
+    border-color: #8ba2f0; /* Зміна кольору обводки при фокусі */
+    outline: none; /* Видалити стандартне виділення */
+}
+
+.contact-button {
+    background-color: #8ba2f0; /* Колір кнопки */
+    color: white; /* Колір тексту кнопки */
+    padding: 12px; /* Внутрішні відступи кнопки */
+    border: none; /* Без обводки */
+    border-radius: 5px; /* Закруглені краї кнопки */
+    cursor: pointer; /* Курсор при наведенні */
+    width: 100%; /* Ширина кнопки */
+    transition: background-color 0.3s; /* Анімація при зміні кольору кнопки */
+}
+
+.contact-button:hover {
+    background-color: #687bb7; /* Темніший колір при наведенні */
+}
+
+.back-link {
+    display: inline-block; /* Вирівнювання */
+    margin-top: 20px; /* Відступ зверху */
+    text-align: center; /* Вирівнювання по центру */
+    color: #8ba2f0; /* Колір посилання */
+    text-decoration: none; /* Без підкреслення */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Підкреслення при наведенні */
+}

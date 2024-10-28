@@ -1,0 +1,63 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Мій сайт{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/add_product.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product_list.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+
+</head>
+<body>
+
+<header class="site-header">
+    <div class="logo">Мій Лого</div>
+    <nav class="nav-menu">
+        <a href="{% url 'product_list' %}" class="nav-link">Головна</a>
+        <a href="{%url 'about'%}" class="nav-link">Про нас</a>
+        <a href="{% url 'contact' %}" class="nav-link">Контакти</a>
+        <a href="{% url 'add_product' %}" class="nav-link">Додати товар</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <!-- Логотип і опис -->
+        <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase">Мій Лого</h5>
+            <p>Це приклад тексту для опису вашого сайту або бренду. Ви можете додати більше інформації тут.</p>
+        </div>
+
+        <!-- Швидка навігація -->
+        <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase">Навігація</h5>
+            <ul class="list-unstyled">
+                <li><a href="" class="footer-link">Головна</a></li>
+                <li><a href="{%url 'about'%}" class="footer-link">Про нас</a></li>
+                <li><a href="{% url 'contact' %}"class="footer-link" >Контакти</a></li>
+            </ul>
+        </div>
+
+        <!-- Контакти і соц. мережі -->
+        <div class="col-md-4 mb-3">
+            <h5 class="text-uppercase">Контакти</h5>
+            <p><i class="bi bi-envelope footer-icon"></i> info@example.com</p>
+            <p><i class="bi bi-telephone footer-icon"></i> +38 (012) 345-67-89</p>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
